@@ -14,6 +14,7 @@ public class ObjectSelectionController : MonoBehaviour
     {
         ChangedObjective(clickedObject.GetInteractionType());
         currentObjective = clickedObject.GetInteractionType();
+        currentAction = InteractionType.None;
         player.MoveToDirection(clickedObject.transform.position, StartAction);
     }
 
@@ -27,6 +28,9 @@ public class ObjectSelectionController : MonoBehaviour
                 break;
             case InteractionType.Baby:
                 gameVariables.HoldBaby();
+                break;
+            case InteractionType.Broom:
+                gameVariables.StartCleaning();
                 break;
         }
     }
@@ -42,6 +46,9 @@ public class ObjectSelectionController : MonoBehaviour
                     break;
                 case InteractionType.Baby:
                     gameVariables.DropBaby();
+                    break;
+                case InteractionType.Broom:
+                    gameVariables.StopCleaning();
                     break;
 
             }
