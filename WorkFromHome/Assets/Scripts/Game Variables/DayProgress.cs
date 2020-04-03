@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class DayProgress : MonoBehaviour
 {
-    [SerializeField] private float daySpeed;
     [SerializeField] private float secondsPerDay;
+    [SerializeField] private EndOfDay endOfDayScreen;
 
     private float secondsPassed;
 
@@ -28,11 +28,12 @@ public class DayProgress : MonoBehaviour
     {
         if (inProgress)
         {
-            secondsPassed += Time.deltaTime * daySpeed;
+            secondsPassed += Time.deltaTime;
             if (secondsPassed >= SecondsPerDay)
             {
                 secondsPassed = SecondsPerDay;
                 inProgress = false;
+                endOfDayScreen.Show();
             }
         }
     }

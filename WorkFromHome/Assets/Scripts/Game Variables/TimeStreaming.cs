@@ -6,7 +6,8 @@ public class TimeStreaming : MonoBehaviour
 
     private bool isStreaming;
 
-    [SerializeField] private float dayProgress;
+    public bool IsStreaming { get { return isStreaming; } private set { isStreaming = value; } }
+    
     [SerializeField] private float streamingMultiplier;
 
     private void Update()

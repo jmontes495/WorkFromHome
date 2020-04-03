@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class GameVariablesController : MonoBehaviour
 {
+    private PlayerProgress playerProgress;
     private TimeStreaming timeStreaming;
     private BabyHappiness babyHappiness;
     private FilthyRoom filthyRoom;
 
     private void Start()
     {
+        playerProgress = GetComponent<PlayerProgress>();
         timeStreaming = GetComponent<TimeStreaming>();
         babyHappiness = GetComponent<BabyHappiness>();
         filthyRoom = GetComponent<FilthyRoom>();
