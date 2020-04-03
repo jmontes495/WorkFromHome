@@ -1122,6 +1122,7 @@ GameObject:
   - component: {fileID: 2047959807}
   - component: {fileID: 2047959806}
   - component: {fileID: 2047959809}
+  - component: {fileID: 2047959810}
   m_Layer: 0
   m_Name: Game Variables
   m_TagString: Untagged
@@ -1183,3 +1184,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   daySpeed: 2
   secondsPerDay: 112
+--- !u!114 &2047959810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047959805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1aada10fd3b7e94fb85e9e626ce9ea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondsWithoutAttention: 10
+  maximumHappiness: 40
+  happinessDeltaRate: 2

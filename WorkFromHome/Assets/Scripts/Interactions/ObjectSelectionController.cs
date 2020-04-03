@@ -25,12 +25,26 @@ public class ObjectSelectionController : MonoBehaviour
             case InteractionType.Computer:
                 gameVariables.BeginStream();
                 break;
+            case InteractionType.Baby:
+                gameVariables.HoldBaby();
+                break;
         }
     }
 
     private void ChangedObjective(InteractionType newType)
     {
-        if (currentAction != newType && currentAction == InteractionType.Computer)
-            gameVariables.EndStream();
+        if (currentAction != newType)
+        {
+            switch (currentAction)
+            {
+                case InteractionType.Computer:
+                    gameVariables.EndStream();
+                    break;
+                case InteractionType.Baby:
+                    gameVariables.DropBaby();
+                    break;
+
+            }
+        }
     }
 }

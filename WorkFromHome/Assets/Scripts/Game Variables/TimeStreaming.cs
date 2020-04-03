@@ -28,7 +28,7 @@ public class TimeStreaming : MonoBehaviour
         isStreaming = false;
     }
 
-    public void Reset()
+    public void ResetInfo()
     {
         timeStreamingToday = 0;
         isStreaming = false;
