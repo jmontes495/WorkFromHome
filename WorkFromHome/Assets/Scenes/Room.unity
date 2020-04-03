@@ -936,12 +936,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1596864206}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef1f0cf8f2dd43248b8533e314c4c0cf, type: 3}
+  m_Script: {fileID: 11500000, guid: a76f3844b9e94de428c1e4c755c3ba11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1596864209}
-  dayProgress: 0
-  daySpeed: 1
+  dayProgress: {fileID: 2047959809}
 --- !u!114 &1596864209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1122,6 +1121,7 @@ GameObject:
   - component: {fileID: 2047959808}
   - component: {fileID: 2047959807}
   - component: {fileID: 2047959806}
+  - component: {fileID: 2047959809}
   m_Layer: 0
   m_Name: Game Variables
   m_TagString: Untagged
@@ -1169,3 +1169,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2047959809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047959805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef1f0cf8f2dd43248b8533e314c4c0cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  daySpeed: 2
+  secondsPerDay: 112
