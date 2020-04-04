@@ -45,6 +45,8 @@ public class PlayerProgress : MonoBehaviour
     private void Start()
     {
         timeStreaming = GetComponent<TimeStreaming>();
+        followers = initialFollowers;
+        money = initialMoney;
     }
 
     private void Update()
@@ -60,6 +62,7 @@ public class PlayerProgress : MonoBehaviour
             followersRemaining -= deltaFollowers;
             followers += deltaFollowers;
         }
+
     }
 
     public void PurchaseUpgrade(StreamingUpgrade newUpgrade)
