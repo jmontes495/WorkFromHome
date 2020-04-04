@@ -32,6 +32,16 @@ public class PlayerProgress : MonoBehaviour
         return dailyExpenses;
     }
 
+    public float GetMoney()
+    {
+        return money;
+    }
+
+    public int GetFollowers()
+    {
+        return followers;
+    }
+
     private void Start()
     {
         timeStreaming = GetComponent<TimeStreaming>();
@@ -78,5 +88,4 @@ public class PlayerProgress : MonoBehaviour
         if (currentDay > maximumDays)
             currentDay = maximumDays;
     }
-    
 }
