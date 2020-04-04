@@ -16,6 +16,7 @@ public class GameVariablesController : MonoBehaviour
         timeStreaming = GetComponent<TimeStreaming>();
         babyHappiness = GetComponent<BabyHappiness>();
         filthyRoom = GetComponent<FilthyRoom>();
+        dayProgress = GetComponent<DayProgress>();
     }
 
     public void BeginStream()
