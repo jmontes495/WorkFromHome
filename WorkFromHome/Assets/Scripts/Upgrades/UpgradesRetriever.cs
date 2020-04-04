@@ -26,6 +26,7 @@ public class UpgradesRetriever : MonoBehaviour
 
     public void PurchaseUpgrade(StreamingUpgrade upgrade)
     {
+        upgrade.SetPurchased();
         playerProgress.PurchaseUpgrade(upgrade);
     }
 }

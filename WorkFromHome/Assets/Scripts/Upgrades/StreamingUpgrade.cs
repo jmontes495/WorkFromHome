@@ -34,4 +34,9 @@ public class StreamingUpgrade : MonoBehaviour
 
         return true;
     }
+
+    public void SetPurchased()
+    {
+        isPurchased = true;
+    }
 }
