@@ -43,6 +43,7 @@ public class UpgradeButton : MonoBehaviour
 
     private void OnPurchased()
     {
+        SetAsEmpty();
         onPurchaseAction(upgrade);
     }
 }
