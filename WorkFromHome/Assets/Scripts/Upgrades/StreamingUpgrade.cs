@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class StreamingUpgrade : MonoBehaviour
@@ -8,6 +7,7 @@ public class StreamingUpgrade : MonoBehaviour
     [SerializeField] private float price;
     [SerializeField] private int viewersGained;
     [SerializeField] private int dayUnlocked;
+    [SerializeField] private UpgradeCategory category;
     [SerializeField] private List<StreamingUpgrade> prerequisites;
 
     public bool IsPurchased { get { return isPurchased; } private set { isPurchased = value; } }
@@ -16,6 +16,7 @@ public class StreamingUpgrade : MonoBehaviour
     public float Price { get { return price; } private set { price = value; } }
     public int ViewersGained { get { return viewersGained; } private set { viewersGained = value; } }
     public int DayUnlocked { get { return dayUnlocked; } private set { dayUnlocked = value; } }
+    public UpgradeCategory Category { get { return category; } private set { category = value; } }
 
     private bool isPurchased;
 
