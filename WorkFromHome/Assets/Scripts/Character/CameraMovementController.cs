@@ -7,6 +7,7 @@ public class CameraMovementController : MonoBehaviour
     [SerializeField] private float cameraSpeed;
     [SerializeField] private float leftLimit;
     [SerializeField] private float rightLimit;
+    [SerializeField] private CameraPointers cameraPointers;
 
     float windowBorderDelta = 10;
 
@@ -16,6 +17,9 @@ public class CameraMovementController : MonoBehaviour
             transform.position += Vector3.right * Time.deltaTime * cameraSpeed;
 
         if (Input.mousePosition.x <= 0 + windowBorderDelta && transform.position.x > leftLimit)
-            transform.position -= Vector3.right * Time.deltaTime * cameraSpeed;        
+            transform.position -= Vector3.right * Time.deltaTime * cameraSpeed;
+
+        cameraPointers.ActivateLeftArrow(transform.position.x > leftLimit + 0.5f);
+        cameraPointers.ActivateRightArrow(transform.position.x < rightLimit - 0.5f);
     }
 }
