@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -13,8 +14,19 @@ public class UpgradeButton : MonoBehaviour
     [SerializeField] private Image icon;
     [SerializeField] private Button purchaseButton;
 
-    public void SetUpgradeValues(StreamingUpgrade upgrade)
+    private Action<StreamingUpgrade> onPurchaseAction;
+    private StreamingUpgrade upgrade;
+
+    private void Start()
     {
+        purchaseButton.onClick.RemoveAllListeners();
+        purchaseButton.onClick.AddListener(OnPurchased);
+    }
+
+    public void SetUpgradeValues(StreamingUpgrade upgrade, Action<StreamingUpgrade> purchased)
+    {
+        this.upgrade = upgrade;
+        onPurchaseAction = purchased;
         valuesContained.SetActive(true);
         purchaseButton.interactable = true;
 
@@ -27,5 +39,10 @@ public class UpgradeButton : MonoBehaviour
     {
         valuesContained.SetActive(false);
         purchaseButton.interactable = false;
+    }
+
+    private void OnPurchased()
+    {
+        onPurchaseAction(upgrade);
     }
 }

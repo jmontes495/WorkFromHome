@@ -27,7 +27,7 @@ public class UpgradesSetter : MonoBehaviour
             if (i >= upgrades.Count)
                 upgradeButtons[i].SetAsEmpty();
             else
-                upgradeButtons[i].SetUpgradeValues(upgrades[i]);
+                upgradeButtons[i].SetUpgradeValues(upgrades[i], upgradesRetriever.PurchaseUpgrade);
         }
     }
 

@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyPerSecondPerFollower: 5
   followersPerSecond: 10
+  purchaseDelay: 5
   initialFollowers: 100
   initialMoney: 1000
   dailyExpenses:

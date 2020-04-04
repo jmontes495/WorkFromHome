@@ -9,6 +9,7 @@ public class PlayerProgress : MonoBehaviour
     private int currentDay;
     [SerializeField] private float moneyPerSecondPerFollower;
     [SerializeField] private float followersPerSecond;
+    [SerializeField] private float purchaseDelay;
     [SerializeField] private int initialFollowers;
     [SerializeField] private float initialMoney;
     [SerializeField] private List<string> dailyExpenses;
@@ -21,6 +22,9 @@ public class PlayerProgress : MonoBehaviour
 
     public int CurrentDay { get { return currentDay; } private set { currentDay = value; } }
     public float MoneyOfTheDay { get { return moneyOfTheDay; } private set { moneyOfTheDay = value; } }
+
+    private float deltaT;
+    private float initialDelta;
 
     public List<float> DailyCosts()
     {
@@ -56,11 +60,21 @@ public class PlayerProgress : MonoBehaviour
 
         if (followersRemaining > 0)
         {
-            int deltaFollowers = (int)(followersRemaining * followersPerSecond * Time.deltaTime);
-            if (followersRemaining < followersPerSecond)
+            deltaT += Time.deltaTime;
+            initialDelta += Time.deltaTime;
+
+            if (initialDelta < purchaseDelay)
+                return;
+
+            if (deltaT > 1.0f)
+                deltaT = 0f;
+            else
+                return;
+            float deltaFollowers = followersPerSecond;
+            if (followersRemaining < deltaFollowers)
                 deltaFollowers = followersRemaining;
-            followersRemaining -= deltaFollowers;
-            followers += deltaFollowers;
+            followersRemaining -= (int) deltaFollowers;
+            followers += (int) deltaFollowers;
         }
 
     }
@@ -69,6 +83,7 @@ public class PlayerProgress : MonoBehaviour
     {
         money -= newUpgrade.Price;
         followersRemaining += newUpgrade.ViewersGained;
+        initialDelta = 0;
     }
 
     public void ResetProgress()

@@ -17,10 +17,15 @@ public class UpgradesRetriever : MonoBehaviour
         List<StreamingUpgrade> availableUpgrades = new List<StreamingUpgrade>();
         foreach (StreamingUpgrade upgrade in upgrades)
         {
-            if (upgrade.DayUnlocked >= playerProgress.CurrentDay && upgrade.IsAvailable() && !upgrade.IsPurchased)
+            if (upgrade.DayUnlocked >= playerProgress.CurrentDay && upgrade.IsAvailable() && !upgrade.IsPurchased && playerProgress.GetMoney() >= upgrade.Price)
                 availableUpgrades.Add(upgrade);
         }
 
         return availableUpgrades;
+    }
+
+    public void PurchaseUpgrade(StreamingUpgrade upgrade)
+    {
+        playerProgress.PurchaseUpgrade(upgrade);
     }
 }
