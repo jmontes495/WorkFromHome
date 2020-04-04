@@ -1432,6 +1432,11 @@ PrefabInstance:
       propertyPath: playerProgress
       value: 
       objectReference: {fileID: 2047959812}
+    - target: {fileID: 276979619206874425, guid: 74db712261eea0343ab4cbb15fdc7821,
+        type: 3}
+      propertyPath: gameVariables
+      value: 
+      objectReference: {fileID: 2047959807}
     - target: {fileID: 276979621204606284, guid: 74db712261eea0343ab4cbb15fdc7821,
         type: 3}
       propertyPath: m_havePropertiesChanged
