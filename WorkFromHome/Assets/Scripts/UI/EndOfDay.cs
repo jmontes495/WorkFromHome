@@ -25,6 +25,7 @@ public class EndOfDay : MonoBehaviour
             costsOfDay += dailyExpenses[i] + " - " + dailyCosts[i] + "<br>";
         }
         costsOfDay += "money - " + playerProgress.MoneyOfTheDay;
+        costs.text = costsOfDay;
 }
 
     private void OnNextDay()
