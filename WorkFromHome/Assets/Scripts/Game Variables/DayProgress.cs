@@ -37,4 +37,10 @@ public class DayProgress : MonoBehaviour
             }
         }
     }
+
+    public void ResetInfo()
+    {
+        inProgress = true;
+        secondsPassed = 0;
+    }
 }

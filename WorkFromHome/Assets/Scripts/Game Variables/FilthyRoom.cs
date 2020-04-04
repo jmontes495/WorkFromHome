@@ -54,7 +54,6 @@ public class FilthyRoom : MonoBehaviour
             }
         }
 
-        //Debug.LogError(isGettingMessy + " - " + isBeingCleaned + " - " + isClean + " - " + isFilthyAF);
     }
 
     public void StartCleaning()

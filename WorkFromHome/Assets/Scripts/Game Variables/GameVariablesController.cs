@@ -8,6 +8,7 @@ public class GameVariablesController : MonoBehaviour
     private TimeStreaming timeStreaming;
     private BabyHappiness babyHappiness;
     private FilthyRoom filthyRoom;
+    private DayProgress dayProgress;
 
     private void Start()
     {
@@ -45,5 +46,14 @@ public class GameVariablesController : MonoBehaviour
     public void StopCleaning()
     {
         filthyRoom.StopCleaning();
+    }
+
+    public void CompleteDay()
+    {
+        playerProgress.CashDay();
+        timeStreaming.ResetInfo();
+        babyHappiness.ResetInfo();
+        filthyRoom.ResetInfo();
+        dayProgress.ResetInfo();
     }
 }

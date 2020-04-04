@@ -9,6 +9,7 @@ public class EndOfDay : MonoBehaviour
     [SerializeField] private Button newDayButton;
     [SerializeField] private TextMeshProUGUI costs;
     [SerializeField] private PlayerProgress playerProgress;
+    [SerializeField] private GameVariablesController gameVariables;
 
     public void Show()
     {
@@ -28,7 +29,7 @@ public class EndOfDay : MonoBehaviour
 
     private void OnNextDay()
     {
-        playerProgress.CashDay();
+        gameVariables.CompleteDay();
         gameObject.SetActive(false);
     }
 
