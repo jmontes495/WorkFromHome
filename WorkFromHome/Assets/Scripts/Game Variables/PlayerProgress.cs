@@ -97,13 +97,19 @@ public class PlayerProgress : MonoBehaviour
         money += moneyOfTheDay;
         moneyOfTheDay = 0;
 
-        foreach (float cost in dailyCosts)
-        {
-            money -= cost;
-        }
+        if (currentDay < dailyCosts.Count)
+            money -= GetCurrentDayCosts();
 
         currentDay++;
         if (currentDay > maximumDays)
             currentDay = maximumDays;
+    }
+
+    public float GetCurrentDayCosts()
+    {
+        if (currentDay < dailyCosts.Count)
+            return dailyCosts[currentDay];
+
+        return 0;
     }
 }

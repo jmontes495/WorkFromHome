@@ -20,11 +20,10 @@ public class EndOfDay : MonoBehaviour
         string costsOfDay = "";
         List<string> dailyExpenses = playerProgress.DailyExpenses();
         List<float> dailyCosts = playerProgress.DailyCosts();
-        for (int i = 0; i < dailyExpenses.Count; i++)
-        {
-            costsOfDay += dailyExpenses[i] + " - " + dailyCosts[i] + "<br>";
-        }
-        costsOfDay += "money - " + playerProgress.MoneyOfTheDay;
+
+        costsOfDay += "expenses: " + playerProgress.GetCurrentDayCosts() + "<br>";        
+        costsOfDay += "money earned: " + playerProgress.MoneyOfTheDay;
+
         costs.text = costsOfDay;
 }
 
