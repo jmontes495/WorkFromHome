@@ -1351,6 +1351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 1154741366}
   dayProgress: {fileID: 2047959809}
+  dayNightimePercentage: 0
 --- !u!1 &1278307867
 GameObject:
   m_ObjectHideFlags: 0
@@ -2573,12 +2574,12 @@ PrefabInstance:
     - target: {fileID: 5275000331948233720, guid: de8474ea46f536c4f9f3fb07ca46e9a8,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 485
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5275000331948233720, guid: de8474ea46f536c4f9f3fb07ca46e9a8,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 5275000331948233720, guid: de8474ea46f536c4f9f3fb07ca46e9a8,
         type: 3}
@@ -2588,22 +2589,22 @@ PrefabInstance:
     - target: {fileID: 5275000331948233720, guid: de8474ea46f536c4f9f3fb07ca46e9a8,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5275000331948233720, guid: de8474ea46f536c4f9f3fb07ca46e9a8,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5275000331948233720, guid: de8474ea46f536c4f9f3fb07ca46e9a8,
-        type: 3}
-      propertyPath: m_AnchorMax.x
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5275000331948233720, guid: de8474ea46f536c4f9f3fb07ca46e9a8,
         type: 3}
-      propertyPath: m_AnchorMax.y
+      propertyPath: m_AnchorMax.x
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275000331948233720, guid: de8474ea46f536c4f9f3fb07ca46e9a8,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5275000331948233720, guid: de8474ea46f536c4f9f3fb07ca46e9a8,
         type: 3}
