@@ -657,14 +657,14 @@ RectTransform:
   m_GameObject: {fileID: 744744650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1028794227}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6.15, y: 0}
+  m_AnchoredPosition: {x: 6.72, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &744744652
@@ -680,6 +680,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   computer: {fileID: 744744653}
+  computers:
+  - {fileID: 21300000, guid: 6108f8d8188e3ab4db7b3fd86b39899f, type: 3}
+  - {fileID: 21300000, guid: 82d285c96c553d4448f7746da1468c73, type: 3}
+  - {fileID: 21300000, guid: 167bcf9cd64ce3c439f67e7f4d71fec3, type: 3}
+  - {fileID: 21300000, guid: 718d412653b80c94c8d1b08b82920a3c, type: 3}
 --- !u!212 &744744653
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -717,15 +722,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 6108f8d8188e3ab4db7b3fd86b39899f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.15, y: 3.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &752277801
@@ -1719,14 +1724,14 @@ RectTransform:
   m_GameObject: {fileID: 1516258184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1028794227}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.3, y: -2.97}
+  m_AnchoredPosition: {x: 3.84, y: -1.48}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1516258186
@@ -1742,6 +1747,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chair: {fileID: 1516258187}
+  chairs:
+  - {fileID: 21300000, guid: d05215dc91e434e4e9fe715b58fb71a1, type: 3}
+  - {fileID: 21300000, guid: 094fe68e06cd92642a65cad7e8c146fc, type: 3}
+  - {fileID: 21300000, guid: 3348845ef2913df4b9e39d25cd50314f, type: 3}
+  - {fileID: 21300000, guid: 6e1ee07f8124fc34bb79fbbe8583e909, type: 3}
 --- !u!212 &1516258187
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1779,15 +1789,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: d05215dc91e434e4e9fe715b58fb71a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4.38, y: 6.46}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1565960013
