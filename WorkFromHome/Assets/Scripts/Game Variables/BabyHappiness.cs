@@ -46,7 +46,10 @@ public class BabyHappiness : MonoBehaviour
         {
             timeAlone -= Time.deltaTime;
             if (timeAlone < secondsWithoutAttention)
+            {
+                happinessPerDay = maximumHappiness;
                 isCrying = false;
+            }
         }
     }
 
