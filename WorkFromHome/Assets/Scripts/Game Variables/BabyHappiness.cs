@@ -15,6 +15,8 @@ public class BabyHappiness : MonoBehaviour
 
     private PlayerProgress playerProgress;
 
+    public bool IsCrying { get => isCrying; set => isCrying = value; }
+
     private void Start()
     {
         playerProgress = GetComponent<PlayerProgress>();

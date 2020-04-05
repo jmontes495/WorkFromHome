@@ -592,7 +592,11 @@ MonoBehaviour:
   cameraSpeed: 15
   leftLimit: -30
   rightLimit: 0
+  livingRoomLimit: -10
+  babyRoomLimit: -20
   cameraPointers: {fileID: 3420070421218352004}
+  filthyRoom: {fileID: 1319713703}
+  babyHappiness: {fileID: 1319713704}
 --- !u!1 &614767180
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,6 +1343,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01aa3dfdb73567a42882a29d3d8a06ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1319713704 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6052953174509545776, guid: 2393f2ac59a880d42a66cdbdb4c765b4,
+    type: 3}
+  m_PrefabInstance: {fileID: 6052953175481616946}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1aada10fd3b7e94fb85e9e626ce9ea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1368437576

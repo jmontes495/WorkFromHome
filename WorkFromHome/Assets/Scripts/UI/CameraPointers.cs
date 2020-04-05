@@ -6,7 +6,9 @@ public class CameraPointers : MonoBehaviour
 {
     [SerializeField] private Image leftArrow;
     [SerializeField] private Image rightArrow;
-
+    [SerializeField] private Image cryingIndicator;
+    [SerializeField] private Image dirtyIndicatorLeft;
+    [SerializeField] private Image dirtyIndicatorRight;
 
     public void ActivateLeftArrow(bool active)
     {
@@ -16,5 +18,20 @@ public class CameraPointers : MonoBehaviour
     public void ActivateRightArrow(bool active)
     {
         rightArrow.gameObject.SetActive(active);
+    }
+
+    public void ActivateCryingIndicator(bool active)
+    {
+        cryingIndicator.gameObject.SetActive(active);
+    }
+
+    public void ActivateDirtyIndicatorLeft(bool active)
+    {
+        dirtyIndicatorLeft.gameObject.SetActive(active);
+    }
+
+    public void ActivateDirtyIndicatorRight(bool active)
+    {
+        dirtyIndicatorRight.gameObject.SetActive(active);
     }
 }

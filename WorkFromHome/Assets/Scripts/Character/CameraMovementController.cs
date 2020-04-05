@@ -7,7 +7,11 @@ public class CameraMovementController : MonoBehaviour
     [SerializeField] private float cameraSpeed;
     [SerializeField] private float leftLimit;
     [SerializeField] private float rightLimit;
+    [SerializeField] private float livingRoomLimit;
+    [SerializeField] private float babyRoomLimit;
     [SerializeField] private CameraPointers cameraPointers;
+    [SerializeField] private FilthyRoom filthyRoom;
+    [SerializeField] private BabyHappiness babyHappiness;
 
     float windowBorderDelta = 10;
 
@@ -21,5 +25,8 @@ public class CameraMovementController : MonoBehaviour
 
         cameraPointers.ActivateLeftArrow(transform.position.x > leftLimit + 0.5f);
         cameraPointers.ActivateRightArrow(transform.position.x < rightLimit - 0.5f);
+        cameraPointers.ActivateDirtyIndicatorLeft(filthyRoom.IsFilthyAF && transform.position.x > livingRoomLimit + 0.5f);
+        cameraPointers.ActivateDirtyIndicatorRight(filthyRoom.IsFilthyAF && transform.position.x < babyRoomLimit - 0.5f);
+        cameraPointers.ActivateCryingIndicator(babyHappiness.IsCrying && transform.position.x > babyRoomLimit + 0.5f);
     }
 }
