@@ -1,10 +1,13 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
+using TMPro;
 
 public class UpgradesSetter : MonoBehaviour
 {
     [SerializeField] private Button showButton;
+    [SerializeField] private TextMeshProUGUI buttonText;
     [SerializeField] private UpgradesRetriever upgradesRetriever;
     private UpgradeButton[] upgradeButtons;
 
@@ -41,14 +44,16 @@ public class UpgradesSetter : MonoBehaviour
     {
         if (isShowing)
         {
-            transform.Translate(0, 4, 0);
+            transform.DOMoveY(transform.position.y + 4f, 0.2f);
             isShowing = false;
+            buttonText.text = "See Upgrades";
         }
         else
         {
             UpdateUpgrades();
-            transform.Translate(0, -4, 0);
+            transform.DOMoveY(transform.position.y - 4f, 0.2f);
             isShowing = true;
+            buttonText.text = "Hide Upgrades";
         }
 
     }

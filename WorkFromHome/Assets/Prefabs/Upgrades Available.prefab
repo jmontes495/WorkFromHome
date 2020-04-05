@@ -310,6 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showButton: {fileID: 5275000333522012738}
+  buttonText: {fileID: 5275000331865327986}
   upgradesRetriever: {fileID: 0}
 --- !u!1 &5275000333522012740
 GameObject:
