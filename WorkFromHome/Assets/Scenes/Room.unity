@@ -257,7 +257,6 @@ GameObject:
   m_Component:
   - component: {fileID: 242970644}
   - component: {fileID: 242970648}
-  - component: {fileID: 242970647}
   - component: {fileID: 242970646}
   - component: {fileID: 242970645}
   m_Layer: 5
@@ -324,20 +323,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &242970647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 242970643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a76f3844b9e94de428c1e4c755c3ba11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 242970648}
-  dayProgress: {fileID: 2047959809}
 --- !u!114 &242970648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1419,6 +1404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 752277802}
   gameVariables: {fileID: 2047959807}
+  playerAnimator: {fileID: 0}
 --- !u!4 &1318399721
 Transform:
   m_ObjectHideFlags: 0
