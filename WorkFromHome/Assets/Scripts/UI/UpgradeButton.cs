@@ -23,7 +23,7 @@ public class UpgradeButton : MonoBehaviour
         purchaseButton.onClick.AddListener(OnPurchased);
     }
 
-    public void SetUpgradeValues(StreamingUpgrade upgrade, Action<StreamingUpgrade> purchased)
+    public void SetUpgradeValues(bool canBeBought, StreamingUpgrade upgrade, Action<StreamingUpgrade> purchased)
     {
         this.upgrade = upgrade;
         onPurchaseAction = purchased;
@@ -33,6 +33,9 @@ public class UpgradeButton : MonoBehaviour
         upgradeName.text = upgrade.UpgradeName;
         price.text = upgrade.Price.ToString();
         followers.text = upgrade.ViewersGained.ToString();
+
+        purchaseButton.interactable = canBeBought;
+
     }
 
     public void SetAsEmpty()
