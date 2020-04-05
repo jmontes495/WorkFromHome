@@ -31,7 +31,7 @@ public class EndOfDay : MonoBehaviour
         costs.text = costsOfDay;
     }
 
-    public void ShowPlayerLost()
+    public void ShowPlayerLost(bool isBroke = false)
     {
         okButton.onClick.RemoveAllListeners();
         okButton.onClick.AddListener(Retry);
@@ -39,13 +39,15 @@ public class EndOfDay : MonoBehaviour
         buttonText.text = "Retry";
 
         gameObject.SetActive(true);
-        costs.text = "You are out of strikes!";
+        costs.text = isBroke ? "You ran out of money!" : "You are out of strikes!";
     }
 
     private void OnNextDay()
     {
         gameVariables.CompleteDay();
         gameObject.SetActive(false);
+        if (playerProgress.GetMoney() < 0)
+            ShowPlayerLost(isBroke: true);
     }
 
     private void Retry()
