@@ -1,6 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class CameraPointers : MonoBehaviour
 {
@@ -9,6 +10,13 @@ public class CameraPointers : MonoBehaviour
     [SerializeField] private Image cryingIndicator;
     [SerializeField] private Image dirtyIndicatorLeft;
     [SerializeField] private Image dirtyIndicatorRight;
+
+    private void Start()
+    {
+        dirtyIndicatorLeft.transform.DOShakeRotation(0.5f, 30).SetLoops(-1);
+        dirtyIndicatorRight.transform.DOShakeRotation(0.5f, 30).SetLoops(-1);
+        cryingIndicator.transform.DOShakeRotation(0.5f, 30).SetLoops(-1);
+    }
 
     public void ActivateLeftArrow(bool active)
     {
