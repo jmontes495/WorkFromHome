@@ -44,12 +44,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Wooden Chair
-  price: 200
-  viewersGained: 500
+  price: 400
+  viewersGained: 100
   dayUnlocked: 0
   category: 1
-  prerequisites:
-  - {fileID: 1438368831514971657}
+  prerequisites: []
 --- !u!1 &492457648155063418
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,9 +93,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Office Chair
-  price: 200
-  viewersGained: 500
-  dayUnlocked: 0
+  price: 900
+  viewersGained: 400
+  dayUnlocked: 3
   category: 1
   prerequisites:
   - {fileID: 8962807470896566545}
@@ -144,9 +143,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Office Chair
-  price: 200
-  viewersGained: 500
-  dayUnlocked: 0
+  price: 500
+  viewersGained: 200
+  dayUnlocked: 1
   category: 1
   prerequisites:
   - {fileID: 8029113970065071660}
@@ -194,9 +193,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Cheap Cosplay
-  price: 200
+  price: 800
   viewersGained: 500
-  dayUnlocked: 0
+  dayUnlocked: 3
   category: 2
   prerequisites:
   - {fileID: 1015112718956863674}
@@ -244,9 +243,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Ultra PC
-  price: 200
-  viewersGained: 500
-  dayUnlocked: 0
+  price: 5500
+  viewersGained: 1000
+  dayUnlocked: 7
   category: 3
   prerequisites:
   - {fileID: 2184074823765783641}
@@ -294,12 +293,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Elegant Clothes
-  price: 200
-  viewersGained: 500
-  dayUnlocked: 0
+  price: 300
+  viewersGained: 400
+  dayUnlocked: 1
   category: 2
-  prerequisites:
-  - {fileID: 1438368831514971657}
+  prerequisites: []
 --- !u!1 &2488889954580598230
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,9 +342,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Gamer PC
-  price: 200
-  viewersGained: 500
-  dayUnlocked: 0
+  price: 4500
+  viewersGained: 800
+  dayUnlocked: 5
   category: 3
   prerequisites:
   - {fileID: 1438368831514971657}
@@ -424,7 +422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef1f0cf8f2dd43248b8533e314c4c0cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondsPerDay: 10
+  secondsPerDay: 120
   endOfDayScreen: {fileID: 0}
 --- !u!114 &6052953174509545776
 MonoBehaviour:
@@ -469,18 +467,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da1e5e529ceda443b969e6151e6770b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyPerSecondPerFollower: 5
+  moneyPerSecondPerFollower: 0.04
   followersPerSecond: 10
   purchaseDelay: 5
   initialFollowers: 100
-  initialMoney: 1000
+  initialMoney: 800
   dailyExpenses:
   - Child Support
   - Utilities
   dailyCosts:
-  - 300
-  - 200
-  maximumDays: 0
+  - 250
+  - 250
+  - 400
+  - 400
+  - 750
+  - 750
+  - 1000
+  - 1000
+  - 1500
+  - 15200
+  - 8000
+  - 1700
+  maximumDays: 12
 --- !u!1 &6052953176098098454
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,9 +586,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Sailor Luna Cosplay
-  price: 200
-  viewersGained: 500
-  dayUnlocked: 0
+  price: 2000
+  viewersGained: 1000
+  dayUnlocked: 5
   category: 2
   prerequisites:
   - {fileID: 5966909261864032066}
@@ -630,8 +638,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Desktop
-  price: 200
-  viewersGained: 500
-  dayUnlocked: 0
+  price: 1500
+  viewersGained: 700
+  dayUnlocked: 2
   category: 3
   prerequisites: []
