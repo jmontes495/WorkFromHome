@@ -6,6 +6,8 @@ public class ObjectSelectionController : MonoBehaviour
 {
     [SerializeField] private MainCharacter player;
     [SerializeField] private GameVariablesController gameVariables;
+    [SerializeField] private MainCharacterAnimator playerAnimator;
+
 
     private InteractionType currentObjective;
     private InteractionType currentAction;
@@ -21,16 +23,21 @@ public class ObjectSelectionController : MonoBehaviour
     private void StartAction()
     {
         currentAction = currentObjective;
+        player.transform.localScale = Vector3.one * 0.6f;
+
         switch (currentAction)
         {
             case InteractionType.Computer:
                 gameVariables.BeginStream();
+                playerAnimator.StartStreaming();
                 break;
             case InteractionType.Baby:
                 gameVariables.HoldBaby();
+                playerAnimator.StartPlaying();
                 break;
             case InteractionType.Broom:
                 gameVariables.StartCleaning();
+                playerAnimator.StartCleaning();
                 break;
         }
     }
@@ -39,6 +46,9 @@ public class ObjectSelectionController : MonoBehaviour
     {
         if (currentAction != newType)
         {
+            player.transform.localScale = Vector3.one * 0.8f;
+            playerAnimator.SetNeutral();
+
             switch (currentAction)
             {
                 case InteractionType.Computer:
