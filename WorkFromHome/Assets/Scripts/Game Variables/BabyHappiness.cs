@@ -11,7 +11,8 @@ public class BabyHappiness : MonoBehaviour
 
     [SerializeField] private float secondsWithoutAttention;
     [SerializeField] private float maximumHappiness;
-    [SerializeField] private float happinessDeltaRate;
+    [SerializeField] private float happinessDecreasingRate;
+    [SerializeField] private float happinessWhenHoldRate;
 
     private PlayerProgress playerProgress;
 
@@ -34,7 +35,7 @@ public class BabyHappiness : MonoBehaviour
             }
             else if (isCrying && happinessPerDay > 0)
             {
-                happinessPerDay -= Time.deltaTime * happinessDeltaRate;
+                happinessPerDay -= Time.deltaTime * happinessDecreasingRate;
                 if (happinessPerDay <= 0)
                 {
                     playerProgress.AddStrike();
@@ -44,7 +45,7 @@ public class BabyHappiness : MonoBehaviour
         }
         else
         {
-            timeAlone -= Time.deltaTime;
+            timeAlone -= Time.deltaTime * happinessWhenHoldRate;
             if (timeAlone < secondsWithoutAttention)
             {
                 happinessPerDay = maximumHappiness;
