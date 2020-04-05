@@ -120,6 +120,11 @@ public class PlayerProgress : MonoBehaviour
         return 0;
     }
 
+    public int NumberOfStrikes()
+    {
+        return strikes;
+    }
+
     public void AddStrike()
     {
         strikes++;
