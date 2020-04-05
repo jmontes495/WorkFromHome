@@ -35,7 +35,6 @@ public class UpgradeButton : MonoBehaviour
         followers.text = upgrade.ViewersGained.ToString();
 
         purchaseButton.interactable = canBeBought;
-
     }
 
     public void SetAsEmpty()
@@ -46,7 +45,6 @@ public class UpgradeButton : MonoBehaviour
 
     private void OnPurchased()
     {
-        SetAsEmpty();
         onPurchaseAction(upgrade);
     }
 }

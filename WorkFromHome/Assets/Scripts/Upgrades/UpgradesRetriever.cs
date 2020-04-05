@@ -24,10 +24,14 @@ public class UpgradesRetriever : MonoBehaviour
         return availableUpgrades;
     }
 
-    public void PurchaseUpgrade(StreamingUpgrade upgrade)
+    public bool PurchaseUpgrade(StreamingUpgrade upgrade)
     {
+        if (!UpdateCanBePurchased(upgrade))
+            return false;
+
         upgrade.SetPurchased();
         playerProgress.PurchaseUpgrade(upgrade);
+        return true;
     }
 
     public bool UpdateCanBePurchased(StreamingUpgrade upgrade)
