@@ -41,13 +41,13 @@ public class UpgradesSetter : MonoBehaviour
     {
         if (isShowing)
         {
-            transform.Translate(0, 50, 0);
+            transform.Translate(0, 4, 0);
             isShowing = false;
         }
         else
         {
             UpdateUpgrades();
-            transform.Translate(0, -50, 0);
+            transform.Translate(0, -4, 0);
             isShowing = true;
         }
 

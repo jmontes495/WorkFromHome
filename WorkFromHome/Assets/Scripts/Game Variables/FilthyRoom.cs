@@ -56,6 +56,14 @@ public class FilthyRoom : MonoBehaviour
 
     }
 
+    public float CleanlinessPercentage()
+    {
+        if (isFilthyAF)
+            return 1.0f;
+
+        return timeGettingMessy/messinessLimit;
+    }
+
     public void StartCleaning()
     {
         isBeingCleaned = true;
