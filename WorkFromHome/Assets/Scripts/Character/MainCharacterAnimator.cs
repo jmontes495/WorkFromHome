@@ -15,6 +15,7 @@ public class MainCharacterAnimator : MonoBehaviour
     private List<Sprite> currentAnimation;
     private Tween currentTween;
     private int currentFrame;
+    private int currentClothesLayer;
 
     private void Start()
     {
@@ -50,6 +51,11 @@ public class MainCharacterAnimator : MonoBehaviour
             direction = -1;
 
         mainCharacter.transform.localScale = new Vector3(Mathf.Abs(mainCharacter.transform.localScale.x) * direction, mainCharacter.transform.localScale.y, mainCharacter.transform.localScale.z);
+    }
+
+    public void UpdateClothes()
+    {
+        Debug.Log("Updated clothes");
     }
 
     public void SetNeutral()

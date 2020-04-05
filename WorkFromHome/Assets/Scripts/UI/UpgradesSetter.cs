@@ -9,6 +9,11 @@ public class UpgradesSetter : MonoBehaviour
     [SerializeField] private Button showButton;
     [SerializeField] private TextMeshProUGUI buttonText;
     [SerializeField] private UpgradesRetriever upgradesRetriever;
+    [SerializeField] private ComputerImage computerImage;
+    [SerializeField] private ChairImage chairImage;
+    [SerializeField] private MainCharacterAnimator mainCharacterAnimator;
+
+
     private UpgradeButton[] upgradeButtons;
 
     bool isShowing;
@@ -37,7 +42,15 @@ public class UpgradesSetter : MonoBehaviour
     {
         bool result = upgradesRetriever.PurchaseUpgrade(upgrade);
         if(result)
+        {
             UpdateUpgrades();
+            if (upgrade.Category == UpgradeCategory.Computer)
+                computerImage.UpdateComputer();
+            else if (upgrade.Category == UpgradeCategory.Chair)
+                chairImage.UpdateChair();
+            else if (upgrade.Category == UpgradeCategory.Clothes)
+                mainCharacterAnimator.UpdateClothes();
+        }
     }
 
     private void OnShow()
