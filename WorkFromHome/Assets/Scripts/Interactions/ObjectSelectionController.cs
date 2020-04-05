@@ -48,6 +48,7 @@ public class ObjectSelectionController : MonoBehaviour
         {
             player.transform.localScale = Vector3.one * 0.8f;
             playerAnimator.SetNeutral();
+            playerAnimator.CheckDirection(currentAction, newType);
 
             switch (currentAction)
             {

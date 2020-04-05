@@ -42,6 +42,16 @@ public class MainCharacterAnimator : MonoBehaviour
             currentTween.Kill();
     }
 
+    public void CheckDirection(InteractionType previous, InteractionType next)
+    {
+        int direction = 1;
+
+        if ((previous == InteractionType.Computer && next == InteractionType.Broom) || (previous == InteractionType.Computer && next == InteractionType.Baby) || (previous == InteractionType.Broom && next == InteractionType.Baby))
+            direction = -1;
+
+        mainCharacter.transform.localScale = new Vector3(Mathf.Abs(mainCharacter.transform.localScale.x) * direction, mainCharacter.transform.localScale.y, mainCharacter.transform.localScale.z);
+    }
+
     public void SetNeutral()
     {
         currentAnimation = neutral;
