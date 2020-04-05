@@ -436,9 +436,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1aada10fd3b7e94fb85e9e626ce9ea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondsWithoutAttention: 10
-  maximumHappiness: 40
-  happinessDeltaRate: 2
+  secondsWithoutAttention: 15
+  maximumHappiness: 20
+  happinessDecreasingRate: 2
+  happinessWhenHoldRate: 4
 --- !u!114 &6052953174509545777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,10 +452,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01aa3dfdb73567a42882a29d3d8a06ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeStayingClean: 10
-  messinessMultiplier: 2.1
-  cleaningRate: 4
-  messinessLimit: 30
+  timeStayingClean: 29
+  messinessMultiplier: 1
+  cleaningRate: 2
+  messinessLimit: 24
 --- !u!114 &6052953174509545782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -489,6 +490,7 @@ MonoBehaviour:
   - 8000
   - 1700
   maximumDays: 12
+  endOfDayScreen: {fileID: 0}
 --- !u!1 &6052953176098098454
 GameObject:
   m_ObjectHideFlags: 0
