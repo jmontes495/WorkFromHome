@@ -22,6 +22,8 @@ public class GameVariablesController : MonoBehaviour
     public void BeginStream()
     {
         timeStreaming.BeginStream();
+        if (filthyRoom.IsFilthyAF)
+            playerProgress.AddStrike();
     }
 
     public void EndStream()

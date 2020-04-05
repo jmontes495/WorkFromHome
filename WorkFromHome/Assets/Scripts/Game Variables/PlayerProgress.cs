@@ -16,9 +16,15 @@ public class PlayerProgress : MonoBehaviour
     [SerializeField] private List<float> dailyCosts;
     [SerializeField] private int maximumDays;
 
+
+    [SerializeField] private EndOfDay endOfDayScreen;
+
     private float moneyOfTheDay;
     private TimeStreaming timeStreaming;
     private int followersRemaining;
+
+    private const int maximumStrikes = 3;
+    private int strikes;
 
     public int CurrentDay { get { return currentDay; } private set { currentDay = value; } }
     public float MoneyOfTheDay { get { return moneyOfTheDay; } private set { moneyOfTheDay = value; } }
@@ -51,6 +57,7 @@ public class PlayerProgress : MonoBehaviour
         timeStreaming = GetComponent<TimeStreaming>();
         followers = initialFollowers;
         money = initialMoney;
+        strikes = 0;
     }
 
     private void Update()
@@ -111,5 +118,13 @@ public class PlayerProgress : MonoBehaviour
             return dailyCosts[currentDay];
 
         return 0;
+    }
+
+    public void AddStrike()
+    {
+        strikes++;
+        Debug.LogError(strikes);
+        if (strikes >= maximumStrikes)
+            endOfDayScreen.ShowPlayerLost();
     }
 }

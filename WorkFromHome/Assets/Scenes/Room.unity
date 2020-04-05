@@ -2548,6 +2548,11 @@ PrefabInstance:
       propertyPath: endOfDayScreen
       value: 
       objectReference: {fileID: 1823860226}
+    - target: {fileID: 6052953174509545782, guid: 2393f2ac59a880d42a66cdbdb4c765b4,
+        type: 3}
+      propertyPath: endOfDayScreen
+      value: 
+      objectReference: {fileID: 1823860226}
     - target: {fileID: 6052953174509545778, guid: 2393f2ac59a880d42a66cdbdb4c765b4,
         type: 3}
       propertyPath: m_LocalPosition.x

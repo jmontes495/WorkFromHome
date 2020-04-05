@@ -13,6 +13,13 @@ public class BabyHappiness : MonoBehaviour
     [SerializeField] private float maximumHappiness;
     [SerializeField] private float happinessDeltaRate;
 
+    private PlayerProgress playerProgress;
+
+    private void Start()
+    {
+        playerProgress = GetComponent<PlayerProgress>();
+    }
+
     private void Update()
     {
         if (!isBeingHeld)
@@ -26,6 +33,11 @@ public class BabyHappiness : MonoBehaviour
             else if (isCrying && happinessPerDay > 0)
             {
                 happinessPerDay -= Time.deltaTime * happinessDeltaRate;
+                if (happinessPerDay <= 0)
+                {
+                    playerProgress.AddStrike();
+                }
+
             }
         }
         else
