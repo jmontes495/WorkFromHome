@@ -15,6 +15,14 @@ public class MainCharacterAnimator : MonoBehaviour
     [SerializeField] private List<Sprite> streaming2;
     [SerializeField] private List<Sprite> cleaning2;
     [SerializeField] private List<Sprite> playing2;
+    [SerializeField] private List<Sprite> neutral3;
+    [SerializeField] private List<Sprite> streaming3;
+    [SerializeField] private List<Sprite> cleaning3;
+    [SerializeField] private List<Sprite> playing3;
+    [SerializeField] private List<Sprite> neutral4;
+    [SerializeField] private List<Sprite> streaming4;
+    [SerializeField] private List<Sprite> cleaning4;
+    [SerializeField] private List<Sprite> playing4;
 
     private List<Sprite> currentAnimation;
     private Tween currentTween;
@@ -86,13 +94,13 @@ public class MainCharacterAnimator : MonoBehaviour
     public void UpdateClothes()
     {
         currentClothesLayer++;
-        if (currentAnimation.Equals(neutral))
+        if (currentAnimation.Equals(neutral) || currentAnimation.Equals(neutral2) || currentAnimation.Equals(neutral3))
             SetNeutral();
-        else if (currentAnimation.Equals(streaming))
+        else if (currentAnimation.Equals(streaming) || currentAnimation.Equals(streaming2) || currentAnimation.Equals(streaming3))
             StartStreaming();
-        else if (currentAnimation.Equals(cleaning))
+        else if (currentAnimation.Equals(cleaning) || currentAnimation.Equals(cleaning2) || currentAnimation.Equals(cleaning3))
             StartCleaning();
-        else if (currentAnimation.Equals(playing))
+        else if (currentAnimation.Equals(playing) || currentAnimation.Equals(playing2) || currentAnimation.Equals(playing3))
             StartPlaying();
 
         Debug.Log("Updated clothes");
@@ -100,11 +108,12 @@ public class MainCharacterAnimator : MonoBehaviour
 
     public void SetNeutral()
     {
-        if (currentClothesLayer == 1)
-        {
+        if (currentClothesLayer == 3)
+            currentAnimation = neutral3;
+        else if (currentClothesLayer == 2)
+            currentAnimation = neutral3;
+        else if (currentClothesLayer == 1)
             currentAnimation = neutral2;
-
-        }
         else
             currentAnimation = neutral;
 
@@ -115,7 +124,11 @@ public class MainCharacterAnimator : MonoBehaviour
 
     public void StartStreaming()
     {
-        if (currentClothesLayer == 1)
+        if (currentClothesLayer == 3)
+            currentAnimation = streaming3;
+        else if (currentClothesLayer == 2)
+            currentAnimation = streaming3;
+        else if (currentClothesLayer == 1)
             currentAnimation = streaming2;
         else
             currentAnimation = streaming;
@@ -127,7 +140,11 @@ public class MainCharacterAnimator : MonoBehaviour
 
     public void StartCleaning()
     {
-        if (currentClothesLayer == 1)
+        if (currentClothesLayer == 3)
+            currentAnimation = cleaning3;
+        else if (currentClothesLayer == 2)
+            currentAnimation = cleaning3;
+        else if (currentClothesLayer == 1)
             currentAnimation = cleaning2;
         else
             currentAnimation = cleaning;
@@ -139,7 +156,11 @@ public class MainCharacterAnimator : MonoBehaviour
 
     public void StartPlaying()
     {
-        if (currentClothesLayer == 1)
+        if (currentClothesLayer == 3)
+            currentAnimation = playing3;
+        else if (currentClothesLayer == 2)
+            currentAnimation = playing3;
+        else if (currentClothesLayer == 1)
             currentAnimation = playing2;
         else
             currentAnimation = playing;
