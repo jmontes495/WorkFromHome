@@ -89,4 +89,9 @@ public class MainCharacterAnimator : MonoBehaviour
         mainCharacter.sprite = playing[currentFrame];
         StartAnimation();
     }
+
+    private void OnDestroy()
+    {
+        StopAnimation();
+    }
 }

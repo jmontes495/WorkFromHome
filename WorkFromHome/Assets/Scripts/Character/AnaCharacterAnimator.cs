@@ -91,4 +91,9 @@ public class AnaCharacterAnimator : MonoBehaviour
     {
         isPlaying = false;
     }
+
+    private void OnDestroy()
+    {
+        StopAnimation();
+    }
 }

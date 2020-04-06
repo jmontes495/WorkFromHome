@@ -12,11 +12,14 @@ public class EndOfDay : MonoBehaviour
     [SerializeField] private TextMeshProUGUI costs;
     [SerializeField] private PlayerProgress playerProgress;
     [SerializeField] private GameVariablesController gameVariables;
+    [SerializeField] private Image badEnding;
 
     public void Show()
     {
         okButton.onClick.RemoveAllListeners();
         okButton.onClick.AddListener(OnNextDay);
+
+        badEnding.gameObject.SetActive(false);
 
         buttonText.text = "Start Next Day";
 
@@ -35,6 +38,8 @@ public class EndOfDay : MonoBehaviour
     {
         okButton.onClick.RemoveAllListeners();
         okButton.onClick.AddListener(Retry);
+
+        badEnding.gameObject.SetActive(true);
 
         buttonText.text = "Retry";
 
