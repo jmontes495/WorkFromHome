@@ -195,14 +195,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40a93fb7e8314ed41a3d9767684e3586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeName: Cheap Cosplay
+  upgradeName: Weabo Clothes
   price: 800
   viewersGained: 500
   dayUnlocked: 3
   category: 2
   prerequisites:
   - {fileID: 1015112718956863674}
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 2dcd6eeaa9c846640892dcd0830f5476, type: 3}
 --- !u!1 &2358201421844183528
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40a93fb7e8314ed41a3d9767684e3586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeName: Ultra PC
+  upgradeName: Streamer PC
   price: 5500
   viewersGained: 1000
   dayUnlocked: 7
@@ -303,7 +303,7 @@ MonoBehaviour:
   dayUnlocked: 1
   category: 2
   prerequisites: []
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 54290f79f0b3e944fab59d8109cfea92, type: 3}
 --- !u!1 &2488889954580598230
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,7 +603,7 @@ MonoBehaviour:
   - {fileID: 5966909261864032066}
   - {fileID: 1015112718956863674}
   - {fileID: 2204183680377124333}
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: adea83c7dd279a741ba5b321cd524800, type: 3}
 --- !u!1 &8636841357932570349
 GameObject:
   m_ObjectHideFlags: 0

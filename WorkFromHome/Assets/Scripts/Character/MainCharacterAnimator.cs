@@ -109,7 +109,7 @@ public class MainCharacterAnimator : MonoBehaviour
     public void SetNeutral()
     {
         if (currentClothesLayer == 3)
-            currentAnimation = neutral3;
+            currentAnimation = neutral4;
         else if (currentClothesLayer == 2)
             currentAnimation = neutral3;
         else if (currentClothesLayer == 1)
@@ -125,7 +125,7 @@ public class MainCharacterAnimator : MonoBehaviour
     public void StartStreaming()
     {
         if (currentClothesLayer == 3)
-            currentAnimation = streaming3;
+            currentAnimation = streaming4;
         else if (currentClothesLayer == 2)
             currentAnimation = streaming3;
         else if (currentClothesLayer == 1)
@@ -141,7 +141,7 @@ public class MainCharacterAnimator : MonoBehaviour
     public void StartCleaning()
     {
         if (currentClothesLayer == 3)
-            currentAnimation = cleaning3;
+            currentAnimation = cleaning4;
         else if (currentClothesLayer == 2)
             currentAnimation = cleaning3;
         else if (currentClothesLayer == 1)
@@ -157,7 +157,7 @@ public class MainCharacterAnimator : MonoBehaviour
     public void StartPlaying()
     {
         if (currentClothesLayer == 3)
-            currentAnimation = playing3;
+            currentAnimation = playing4;
         else if (currentClothesLayer == 2)
             currentAnimation = playing3;
         else if (currentClothesLayer == 1)
