@@ -59,4 +59,9 @@ public class GameVariablesController : MonoBehaviour
         filthyRoom.ResetInfo();
         dayProgress.ResetInfo();
     }
+
+    public void SetProgress(bool progress)
+    {
+        dayProgress.SetProgress(progress);
+    }
 }

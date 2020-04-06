@@ -43,4 +43,9 @@ public class DayProgress : MonoBehaviour
         inProgress = true;
         secondsPassed = 0;
     }
+
+    public void SetProgress(bool progress)
+    {
+        inProgress = progress;
+    }
 }

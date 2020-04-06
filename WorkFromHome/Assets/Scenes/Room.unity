@@ -3175,6 +3175,11 @@ PrefabInstance:
       propertyPath: mainCharacterAnimator
       value: 
       objectReference: {fileID: 752277805}
+    - target: {fileID: 5275000331948233669, guid: de8474ea46f536c4f9f3fb07ca46e9a8,
+        type: 3}
+      propertyPath: playerProgress
+      value: 
+      objectReference: {fileID: 2047959812}
     - target: {fileID: 2628328271167761067, guid: de8474ea46f536c4f9f3fb07ca46e9a8,
         type: 3}
       propertyPath: m_AnchorMin.y

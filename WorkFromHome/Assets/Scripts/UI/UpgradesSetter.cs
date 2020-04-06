@@ -12,6 +12,7 @@ public class UpgradesSetter : MonoBehaviour
     [SerializeField] private ComputerImage computerImage;
     [SerializeField] private ChairImage chairImage;
     [SerializeField] private MainCharacterAnimator mainCharacterAnimator;
+    [SerializeField] private PlayerProgress playerProgress;
     [SerializeField] private GameObject arrow;
 
     private UpgradeButton[] upgradeButtons;
@@ -49,7 +50,10 @@ public class UpgradesSetter : MonoBehaviour
             else if (upgrade.Category == UpgradeCategory.Chair)
                 chairImage.UpdateChair();
             else if (upgrade.Category == UpgradeCategory.Clothes)
+            {
                 mainCharacterAnimator.UpdateClothes();
+                playerProgress.CurrentClothesLayer++;
+            }
         }
     }
 

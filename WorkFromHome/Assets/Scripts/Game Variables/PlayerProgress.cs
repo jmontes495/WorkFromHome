@@ -25,9 +25,28 @@ public class PlayerProgress : MonoBehaviour
 
     private const int maximumStrikes = 3;
     private int strikes;
+    private int currentClothesLayer;
+    private bool gotCosplay;
+    private int dayGotCosplay;
 
-    public int CurrentDay { get { return currentDay; } private set { currentDay = value; } }
+    public int CurrentDay { get { return currentDay; } private set { currentDay = value;} }
     public float MoneyOfTheDay { get { return moneyOfTheDay; } private set { moneyOfTheDay = value; } }
+    public int CurrentClothesLayer
+    {
+        get
+        {
+            return currentClothesLayer;
+        }
+        set
+        {
+            currentClothesLayer = value;
+            if(value >= 3)
+            {
+                gotCosplay = true;
+                dayGotCosplay = currentDay;
+            }
+        }
+    }
 
     private float deltaT;
     private float initialDelta;
@@ -58,6 +77,7 @@ public class PlayerProgress : MonoBehaviour
         followers = initialFollowers;
         money = initialMoney;
         strikes = 0;
+        currentClothesLayer = 0;
     }
 
     private void Update()
@@ -131,5 +151,10 @@ public class PlayerProgress : MonoBehaviour
         Debug.LogError(strikes);
         if (strikes >= maximumStrikes)
             endOfDayScreen.ShowPlayerLost();
+    }
+
+    public bool CheckIfWon()
+    {
+        return gotCosplay && dayGotCosplay + 1 < currentDay;
     }
 }
