@@ -29,9 +29,11 @@ public class UpgradeButton : MonoBehaviour
         onPurchaseAction = purchased;
         valuesContained.SetActive(true);
         purchaseButton.interactable = true;
+        icon.sprite = upgrade.Sprite;
+        icon.preserveAspect = true;
 
         upgradeName.text = upgrade.UpgradeName;
-        price.text = upgrade.Price.ToString();
+        price.text = "$ " + upgrade.Price.ToString();
         followers.text = upgrade.ViewersGained.ToString();
 
         purchaseButton.interactable = canBeBought;
@@ -39,6 +41,7 @@ public class UpgradeButton : MonoBehaviour
 
     public void SetAsEmpty()
     {
+        icon.sprite = null;
         valuesContained.SetActive(false);
         purchaseButton.interactable = false;
     }

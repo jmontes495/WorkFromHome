@@ -30,7 +30,6 @@ public class ObjectSelectionController : MonoBehaviour
             case InteractionType.Computer:
                 gameVariables.BeginStream();
                 playerAnimator.StartStreaming();
-                anaCharacterAnimator.StopPlaying();
                 break;
             case InteractionType.Baby:
                 gameVariables.HoldBaby();
@@ -40,7 +39,6 @@ public class ObjectSelectionController : MonoBehaviour
             case InteractionType.Broom:
                 gameVariables.StartCleaning();
                 playerAnimator.StartCleaning();
-                anaCharacterAnimator.StopPlaying();
                 break;
         }
     }
@@ -60,6 +58,7 @@ public class ObjectSelectionController : MonoBehaviour
                     break;
                 case InteractionType.Baby:
                     gameVariables.DropBaby();
+                    anaCharacterAnimator.StopPlaying();
                     break;
                 case InteractionType.Broom:
                     gameVariables.StopCleaning();

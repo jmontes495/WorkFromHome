@@ -12,7 +12,7 @@ public class UpgradesSetter : MonoBehaviour
     [SerializeField] private ComputerImage computerImage;
     [SerializeField] private ChairImage chairImage;
     [SerializeField] private MainCharacterAnimator mainCharacterAnimator;
-
+    [SerializeField] private GameObject arrow;
 
     private UpgradeButton[] upgradeButtons;
 
@@ -57,6 +57,7 @@ public class UpgradesSetter : MonoBehaviour
     {
         if (isShowing)
         {
+            arrow.transform.localScale = new Vector3(1f, 1f, 1f);
             transform.DOMoveY(transform.position.y + 4f, 0.2f);
             isShowing = false;
             buttonText.text = "See Upgrades";
@@ -64,6 +65,7 @@ public class UpgradesSetter : MonoBehaviour
         else
         {
             UpdateUpgrades();
+            arrow.transform.localScale = new Vector3(-1f, 1f, 1f);
             transform.DOMoveY(transform.position.y - 4f, 0.2f);
             isShowing = true;
             buttonText.text = "Hide Upgrades";

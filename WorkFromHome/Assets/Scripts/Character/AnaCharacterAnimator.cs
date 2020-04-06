@@ -28,7 +28,7 @@ public class AnaCharacterAnimator : MonoBehaviour
 
     private void Update()
     {
-        if(!isPlaying)
+        if (!isPlaying)
         {
             if(isCrying != babyHappiness.IsCrying)
             {
@@ -90,6 +90,11 @@ public class AnaCharacterAnimator : MonoBehaviour
     public void StopPlaying()
     {
         isPlaying = false;
+        isCrying = babyHappiness.IsCrying;
+        if (isCrying)
+            SetCrying();
+        else
+            SetHappy();
     }
 
     private void OnDestroy()

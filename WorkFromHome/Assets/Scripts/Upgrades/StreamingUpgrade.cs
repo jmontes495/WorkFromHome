@@ -9,6 +9,8 @@ public class StreamingUpgrade : MonoBehaviour
     [SerializeField] private int dayUnlocked;
     [SerializeField] private UpgradeCategory category;
     [SerializeField] private List<StreamingUpgrade> prerequisites;
+    [SerializeField] private Sprite sprite;
+
 
     public bool IsPurchased { get { return isPurchased; } private set { isPurchased = value; } }
 
@@ -17,6 +19,7 @@ public class StreamingUpgrade : MonoBehaviour
     public int ViewersGained { get { return viewersGained; } private set { viewersGained = value; } }
     public int DayUnlocked { get { return dayUnlocked; } private set { dayUnlocked = value; } }
     public UpgradeCategory Category { get { return category; } private set { category = value; } }
+    public Sprite Sprite { get => sprite; set => sprite = value; }
 
     private bool isPurchased;
 
