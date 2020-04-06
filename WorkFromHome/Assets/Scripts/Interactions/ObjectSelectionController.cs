@@ -7,7 +7,7 @@ public class ObjectSelectionController : MonoBehaviour
     [SerializeField] private MainCharacter player;
     [SerializeField] private GameVariablesController gameVariables;
     [SerializeField] private MainCharacterAnimator playerAnimator;
-
+    [SerializeField] private AnaCharacterAnimator anaCharacterAnimator;
 
     private InteractionType currentObjective;
     private InteractionType currentAction;
@@ -30,14 +30,17 @@ public class ObjectSelectionController : MonoBehaviour
             case InteractionType.Computer:
                 gameVariables.BeginStream();
                 playerAnimator.StartStreaming();
+                anaCharacterAnimator.StopPlaying();
                 break;
             case InteractionType.Baby:
                 gameVariables.HoldBaby();
                 playerAnimator.StartPlaying();
+                anaCharacterAnimator.StartPlaying();
                 break;
             case InteractionType.Broom:
                 gameVariables.StartCleaning();
                 playerAnimator.StartCleaning();
+                anaCharacterAnimator.StopPlaying();
                 break;
         }
     }
