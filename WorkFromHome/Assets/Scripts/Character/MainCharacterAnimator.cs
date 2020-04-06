@@ -11,6 +11,10 @@ public class MainCharacterAnimator : MonoBehaviour
     [SerializeField] private List<Sprite> streaming;
     [SerializeField] private List<Sprite> cleaning;
     [SerializeField] private List<Sprite> playing;
+    [SerializeField] private List<Sprite> neutral2;
+    [SerializeField] private List<Sprite> streaming2;
+    [SerializeField] private List<Sprite> cleaning2;
+    [SerializeField] private List<Sprite> playing2;
 
     private List<Sprite> currentAnimation;
     private Tween currentTween;
@@ -19,8 +23,34 @@ public class MainCharacterAnimator : MonoBehaviour
 
     private void Start()
     {
+        currentClothesLayer = 0;
         SetNeutral();
     }
+
+    //Cheat for clothes
+    //private void Update()
+    //{
+    //    if (Input.GetKeyUp(KeyCode.Alpha1))
+    //    {
+    //        currentClothesLayer = -1;
+    //        UpdateClothes();
+    //    }
+    //    else if (Input.GetKeyUp(KeyCode.Alpha2))
+    //    {
+    //        currentClothesLayer = 0;
+    //        UpdateClothes();
+    //    }
+    //    else if (Input.GetKeyUp(KeyCode.Alpha3))
+    //    {
+    //        currentClothesLayer = 1;
+    //        UpdateClothes();
+    //    }
+    //    else if (Input.GetKeyUp(KeyCode.Alpha4))
+    //    {
+    //        currentClothesLayer = 2;
+    //        UpdateClothes();
+    //    }
+    //}
 
     private void StartAnimation()
     {
@@ -55,38 +85,67 @@ public class MainCharacterAnimator : MonoBehaviour
 
     public void UpdateClothes()
     {
+        currentClothesLayer++;
+        if (currentAnimation.Equals(neutral))
+            SetNeutral();
+        else if (currentAnimation.Equals(streaming))
+            StartStreaming();
+        else if (currentAnimation.Equals(cleaning))
+            StartCleaning();
+        else if (currentAnimation.Equals(playing))
+            StartPlaying();
+
         Debug.Log("Updated clothes");
     }
 
     public void SetNeutral()
     {
-        currentAnimation = neutral;
+        if (currentClothesLayer == 1)
+        {
+            currentAnimation = neutral2;
+
+        }
+        else
+            currentAnimation = neutral;
+
         currentFrame = 0;
-        mainCharacter.sprite = neutral[currentFrame];
+        mainCharacter.sprite = currentAnimation[currentFrame];
         StopAnimation();
     }
 
     public void StartStreaming()
     {
-        currentAnimation = streaming;
+        if (currentClothesLayer == 1)
+            currentAnimation = streaming2;
+        else
+            currentAnimation = streaming;
+
         currentFrame = 0;
-        mainCharacter.sprite = streaming[currentFrame];
+        mainCharacter.sprite = currentAnimation[currentFrame];
         StartAnimation();
     }
 
     public void StartCleaning()
     {
-        currentAnimation = cleaning;
+        if (currentClothesLayer == 1)
+            currentAnimation = cleaning2;
+        else
+            currentAnimation = cleaning;
+
         currentFrame = 0;
-        mainCharacter.sprite = cleaning[currentFrame];
+        mainCharacter.sprite = currentAnimation[currentFrame];
         StartAnimation();
     }
 
     public void StartPlaying()
     {
-        currentAnimation = playing;
+        if (currentClothesLayer == 1)
+            currentAnimation = playing2;
+        else
+            currentAnimation = playing;
+
         currentFrame = 0;
-        mainCharacter.sprite = playing[currentFrame];
+        mainCharacter.sprite = currentAnimation[currentFrame];
         StartAnimation();
     }
 

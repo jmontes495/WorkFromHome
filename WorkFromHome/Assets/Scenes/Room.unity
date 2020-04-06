@@ -956,6 +956,17 @@ MonoBehaviour:
   playing:
   - {fileID: 21300000, guid: 858bff80056fe2342a52ee8d34752db1, type: 3}
   - {fileID: 21300000, guid: d241cd8c8c25689408edc7686c96194a, type: 3}
+  neutral2:
+  - {fileID: 21300000, guid: ba8325d39ef2d82438960e3f36c5b1a4, type: 3}
+  streaming2:
+  - {fileID: 21300000, guid: fc948d7c366a3514b9c7aac8c3089bb1, type: 3}
+  - {fileID: 21300000, guid: 2c79d3c8f91879c468ea76d0975a0b48, type: 3}
+  cleaning2:
+  - {fileID: 21300000, guid: 5298a8cf44513e7468858ad7f20b033b, type: 3}
+  - {fileID: 21300000, guid: ef8cf6d1c8525ba4ca969417f6376bde, type: 3}
+  playing2:
+  - {fileID: 21300000, guid: 5d77a8c04386a1f44821f4b812fb4dd0, type: 3}
+  - {fileID: 21300000, guid: 6ec938066d78e0349881bee7acb84a2a, type: 3}
 --- !u!1 &809036523
 GameObject:
   m_ObjectHideFlags: 0
@@ -2636,7 +2647,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Is I dirty?
+  m_text: Cleanliness Level
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d663c15c68d0f9f4b87233bc44dabcf2, type: 2}
   m_sharedMaterial: {fileID: 21316203201191766, guid: d663c15c68d0f9f4b87233bc44dabcf2,
@@ -2706,10 +2717,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1925400025}
-    characterCount: 11
+    characterCount: 17
     spriteCount: 0
-    spaceCount: 2
-    wordCount: 3
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1

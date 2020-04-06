@@ -15,6 +15,6 @@ public class CleanlinessSlider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        slider.value = filthyRoom.CleanlinessPercentage();
+        slider.value = 1f - filthyRoom.CleanlinessPercentage();
     }
 }
